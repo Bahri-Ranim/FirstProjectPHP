@@ -18,17 +18,15 @@
         <?php do {
             ?>
             <div class="item">
-                <p>
-                    <h2>
-                        <?php echo $article_res['title']; ?>
-                    </h2>
-                </p>
+                <a href="index.php?page=item&articleID=<?php echo $article_res['id']; ?>">
+                    <p>
+                        <h2><?php echo $article_res['title']; ?></h2>
+                    </p>
+                </a>
+
                 <p>
                     <img src="images/<?php echo $article_res['img']; ?>" style="width:200px;height:150px;">
 
-                </p>
-                <p>
-                    <?php echo $article_res['text']; ?>
                 </p>
             </div>
         <?php

@@ -1,7 +1,7 @@
 <h1> this is our home page</h1>
 <?php
 //select all articles belonging to the selected categoryID
-$article_sql="SELECT article.id, article.title, article.img, article.text, category.name as catname 
+$article_sql="SELECT *
                   FROM article join category on article.categoryId=category.categoryID";
 if ($article_query=mysqli_query($dbconnect, $article_sql)){
     $article_res=mysqli_fetch_assoc($article_query);
