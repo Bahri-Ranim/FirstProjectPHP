@@ -1,3 +1,30 @@
 <?php
+include("dbconnect.php");
 ?>
-<h1> salut c ranim et Imene !!!!</h1>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>TITLE</title>
+</head>
+<body>
+    <div class="container">
+        <?php
+            include("categoryList.php");
+        ?>
+    </div>
+    <div class="maincontent">
+        <?php
+            if (!isset($_GET['page'])) {
+                include("home.php");
+            } else {
+                $page=$_GET['page'];
+                include("$page.php");
+            }
+        ?>
+    </div>
+</body>
+</html>
+
+
+
