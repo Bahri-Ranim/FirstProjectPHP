@@ -24,6 +24,10 @@
                     </h2>
                 </p>
                 <p>
+                    <img src="images/<?php echo $article_res['img']; ?>" style="width:200px;height:150px;">
+
+                </p>
+                <p>
                     <?php echo $article_res['text']; ?>
                 </p>
             </div>
