@@ -35,9 +35,7 @@
     if (mysqli_num_rows($article_query)==0) {
         echo "no article in the database";
     } else {
-        ?>
-        <h1> <?php echo $article_res['catname']; ?></h1>
-        <?php do {
+        do {
             ?>
             <div class="item">
                 <a href="index.php?page=item&articleID=<?php echo $article_res['id']; ?>">
