@@ -1,4 +1,13 @@
 <?php
+$category_sql="SELECT category.img as catimg 
+                  FROM category join article on article.categoryId=category.categoryID 
+                  WHERE article.articleID=".$_GET['articleID'];
+$cat_query = mysqli_query($dbconnect, $category_sql);
+$catimg_res = mysqli_fetch_assoc($cat_query);
+var_dump($catimg_res);
+
+
+
     //if articleID is not set, redirect back to index page
     if (!isset($_GET['articleID'])) {
         header("location:index.php");

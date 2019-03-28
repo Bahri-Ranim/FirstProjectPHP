@@ -69,7 +69,7 @@
               </form>
           </li>
           <li>
-              <a class="nav-link" href="index.php?page=admin">admin</a>
+              <a class="nav-link" href="index.php?page=admin">login</a>
           </li>
         </ul>
       </div>
