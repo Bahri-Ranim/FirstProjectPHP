@@ -1,8 +1,25 @@
-<h1>control panel</h1>
-<?php
-/**
- * Created by PhpStorm.
- * User: Asus
- * Date: 28/03/2019
- * Time: 14:53
- */
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <LINK rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Control panel</h5>
+                        <h6>
+                            <p> add article </p>
+                            <p>edit article</p>
+                            <p>delete article</p>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
