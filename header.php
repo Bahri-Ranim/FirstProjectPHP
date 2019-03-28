@@ -69,13 +69,12 @@
               </form>
           </li>
           <li>
-<!--              <a class="nav-link" href="index.php?page=admin">login</a>-->
-              <div class="nav-link dropdown" href="index.php?page=admin">
+              <div class="nav-link dropdown">
                   <button class="dropbtn">login</button>
                   <div class="dropdown-content">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
+                      <a href="index.php?page=admin">Admin</a>
+                      <a href="index.php?page=user">User</a>
+                      <a href="index.php?page=admin&action=logout">Logout</a>
                   </div>
               </div>
           </li>
