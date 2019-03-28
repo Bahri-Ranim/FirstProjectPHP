@@ -21,7 +21,7 @@ li form{
     padding: 5px;
 }
 
-input{
+li form input{
     position: absolute;
     top: 0;
     left: 0;
