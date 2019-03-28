@@ -13,9 +13,21 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Control panel</h5>
                         <h6>
-                            <p> add article </p>
-                            <p>edit article</p>
-                            <p>delete article</p>
+                            <p>
+                                <a href="index.php?page=addarticle">
+                                    Add article
+                                </a>
+                            </p>
+                            <p>
+                                <a href="index.php?page=editarticle">
+                                    Edit article
+                                </a>
+                            </p>
+                            <p>
+                                <a href="index.php?page=deletearticle">
+                                    Delete article
+                                </a>
+                            </p>
                         </h6>
                     </div>
                 </div>
