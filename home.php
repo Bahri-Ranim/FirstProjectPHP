@@ -26,9 +26,11 @@ if (mysqli_num_rows($article_query)==0) {
         ?>
         <div class="item">
             <p>
-            <h2>
+                <a href="index.php?page=item&articleID=<?php echo $article_res['id']; ?>">
+                <h2>
                 <?php echo $article_res['title']; ?>
-            </h2>
+                </h2>
+                </a>
             </p>
             <p>
                 <img src="images/<?php echo $article_res['img']; ?>" style="width:200px;height:150px;">
