@@ -1,4 +1,26 @@
 <?php
+    $catname = "select category.name, category.img from category where category.categoryId=".$_GET['categoryID'] ;
+    $cat_query = mysqli_query($dbconnect, $catname);
+    $catname_res = mysqli_fetch_assoc($cat_query);
+
+
+
+?>
+
+<header class="masthead" style="background-image: url('<?php echo $catname_res['img'] ?> ')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1></h1>
+                    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<?php
     //if categoryID is not set, redirect back to index page
     if (!isset($_GET['categoryID'])) {
         header("location:index.php");
@@ -33,4 +55,6 @@
         } while ($article_res=mysqli_fetch_assoc($article_query));
         ?>
     <?php
-    }
+    }  ?>
+
+
