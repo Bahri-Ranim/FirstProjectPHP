@@ -12,9 +12,11 @@
                 <div class="card card-signin my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Control panel</h5>
-                        <p>
-                            <a href="index.php?page=admin&action=logout">Logout</a>
-                        </p>
+                        <h6>
+                            <p> add article </p>
+                            <p>edit article</p>
+                            <p>delete article</p>
+                        </h6>
                     </div>
                 </div>
             </div>

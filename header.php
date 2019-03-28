@@ -70,12 +70,12 @@
           </li>
           <li>
               <div class="nav-link dropdown">
-                  <button class="dropbtn">login</button>
-                  <div class="dropdown-content">
-                      <a href="index.php?page=admin">Admin</a>
-                      <a href="index.php?page=user">User</a>
-                      <a href="index.php?page=admin&action=logout">Logout</a>
-                  </div>
+                        <button class="dropbtn">login</button>
+                        <div class="dropdown-content">
+                            <a href="index.php?page=admin">Admin</a>
+                            <a href="index.php?page=user">User</a>
+                            <a href="index.php?page=admin&action=logout">Logout</a>
+                        </div>
               </div>
           </li>
         </ul>
