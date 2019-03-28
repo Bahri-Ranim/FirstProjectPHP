@@ -68,6 +68,9 @@
                   <i class="fa fa-search"  ></i>
               </form>
           </li>
+          <li>
+              <a class="nav-link" href="index.php?page=admin">admin</a>
+          </li>
         </ul>
       </div>
     </div>
