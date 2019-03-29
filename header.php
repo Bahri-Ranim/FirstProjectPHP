@@ -68,14 +68,21 @@
                   <i class="fa fa-search"  ></i>
               </form>
           </li>
-          <li>
-              <div class="nav-link dropdown">
-                        <button class="dropbtn">login</button>
-                        <div class="dropdown-content">
-                            <a href="index.php?page=admin">Admin</a>
-                            <a href="index.php?page=user">User</a>
-                            <a href="index.php?page=admin&action=logout">Logout</a>
-                        </div>
+          <li class="nav-link dropdown" >
+
+              <button class="dropbtn">login</button>
+                 <div class="dropdown-content">
+                     <a href="index.php?page=admin">Admin</a>
+                     <a href="index.php?page=user">User</a>
+                     <a href="index.php?page=admin&action=logout">Logout</a>
+                 </div>
+
+          </li>
+          <li class="nav-link">
+              <div class="nav-link" >
+              <a class="dropbtn" style="text-decoration: none; color: white;" href="index.php?page=register">Sign-up
+
+              </a>
               </div>
           </li>
         </ul>

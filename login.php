@@ -32,6 +32,7 @@
                         </div>
 
                         <?php
+
                             if(isset($_POST['login']) && !isset($_SESSION['admin']))  {
                                 ?>
                                     <p>
