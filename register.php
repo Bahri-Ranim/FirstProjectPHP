@@ -6,7 +6,6 @@
  * Time: 00:46
  */
 
-session_start();
 
 if(isset($_POST['sign-up'])) {
 
@@ -20,13 +19,17 @@ if(isset($_POST['sign-up'])) {
         $password_dismatch = true;
     }
 
-    var_dump(!isset($user) && !isset($password_dismatch));
+
     if(!isset($user) && !isset($password_dismatch)){
         $register_sql = "insert into user (username, password, admin) values ('".$_POST['username']."','".$_POST['password']."','0')";
         $register_query=mysqli_query($dbconnect, $register_sql);
     }
 }
 
+if(isset($_POST['sign-up'])){
+    header("location:index.php");
+    }else {
+    include("sign-up.php");
+    }
 
-include ("sign-up.php");
 
