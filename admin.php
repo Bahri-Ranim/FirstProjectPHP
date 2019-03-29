@@ -9,9 +9,10 @@
 
 
     //check if username and password match
-     if(isset($_POST['login'])) {
 
-        $login_sql="select * from user where username='".$_POST['username']."' and password='".$_POST['password']."'";
+    if(isset($_POST['login'])) {
+        $login_sql="select * from user where admin=1 and username='".$_POST['username']."' and password='".$_POST['password']."'";
+
         if ($login_query=mysqli_query($dbconnect, $login_sql)) {
             $login_res=mysqli_fetch_assoc($login_query);
             $_SESSION['admin']=$login_res['username'];
