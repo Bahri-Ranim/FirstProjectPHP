@@ -1,4 +1,7 @@
 <?php
+
+// this file allows to confirm article to delete
+
 session_start();
 //check if user in logged in
 if(!isset($_SESSION['admin'])) {

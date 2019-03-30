@@ -1,7 +1,6 @@
 <?php
 
-// this file allows to select article to delete
-
+//this file allows to select article to edit
 
 
     session_start();
@@ -11,6 +10,12 @@
     }
 
 
+    $editart_sql="select * from article";
+    $editart_query=mysqli_query($dbconnect, $editart_sql);
+    $editart_res=mysqli_fetch_assoc($editart_query);
+
+    //when user enter to another article, session should be reset
+    unset($_SESSION['editarticle']);
 ?>
 
 <!doctype html>
@@ -26,22 +31,19 @@
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Delete article</h5>
+                    <h5 class="card-title text-center">Edit article</h5>
                     <?php
-                        $delart_sql="select * from article";
-                        $delart_query=mysqli_query($dbconnect, $delart_sql);
-                        $delart_res=mysqli_fetch_assoc($delart_query);
                         do {
                             ?>
                                 <p>
-                                    <a href="index.php?page=confirmdel&articleID=<?php  echo $delart_res['id']; ?>">
+                                    <a href="index.php?page=editing&articleID=<?php echo $editart_res['id']; ?>">
                                         <?php
-                                        echo $delart_res['title'];
+                                                echo $editart_res['title'];
                                         ?>
                                     </a>
                                 </p>
                             <?php
-                        } while ($delart_res=mysqli_fetch_assoc($delart_query));
+                        } while ($editart_res=mysqli_fetch_assoc($editart_query))
                     ?>
                 </div>
             </div>
