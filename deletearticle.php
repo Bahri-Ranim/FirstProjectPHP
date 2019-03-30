@@ -27,7 +27,15 @@
                         $delart_query=mysqli_query($dbconnect, $delart_sql);
                         $delart_res=mysqli_fetch_assoc($delart_query);
                         do {
-
+                            ?>
+                                <p>
+                                    <a href="index.php?page=confirmdel&articleID=<?php  echo $delart_res['id']; ?>">
+                                        <?php
+                                        echo $delart_res['title'];
+                                        ?>
+                                    </a>
+                                </p>
+                            <?php
                         } while ($delart_res=mysqli_fetch_assoc($delart_query));
                     ?>
                 </div>
