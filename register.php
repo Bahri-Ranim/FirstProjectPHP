@@ -9,7 +9,7 @@
 
 if(isset($_POST['sign-up'])) {
 
-    $login_sql="select * from user where username='".$_POST['username']."' and password='".$_POST['password']."'";
+    $login_sql="select * from user where username='".$_POST['username']."'";
     if ($login_query=mysqli_query($dbconnect, $login_sql)) {
         $login_res=mysqli_fetch_assoc($login_query);
         $user=$login_res['username'];
@@ -26,7 +26,7 @@ if(isset($_POST['sign-up'])) {
     }
 }
 
-if(isset($_POST['sign-up'])){
+if(isset($_POST['sign-up']) && !isset($user) && !isset($password_dismatch)){
     header("location:index.php");
     }else {
     include("sign-up.php");

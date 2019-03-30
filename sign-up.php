@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="form-label-group">
-                            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Password"  minlength="8" required>
                             <label for="password">Password</label>
                             <p class="help-block text-danger"></p>
                         </div>
@@ -47,24 +47,22 @@
                         if(isset($_POST['sign-up']) && isset($user) ) {
                             ?>
                             <p>
-                                <span class="error"> Username already taken </span>
+                                <span class="error"  style = "color: red" > Username already taken </span>
                             </p>
 
                             <?php
-                        }
-                        ?>
+                        }else {
 
-                        <?php
 
-                        if(isset($password_dismatch)) {
-                        ?>
-                        <p>
-                            <span class="error"> please confirm your password correctly  </span>
-                        </p>
+                              if (isset($_POST['sign-up']) && isset($password_dismatch)) {
+                                ?>
+                                <p>
+                                    <span class="error"  style = "color: red"> please confirm your password correctly  </span>
+                                </p>
 
-                        <?php
-                        }
-                        ?>
+                                <?php
+                                  }
+                              }?>
 
 
                         <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="sign-up">Sign up</button>

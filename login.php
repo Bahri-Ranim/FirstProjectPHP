@@ -36,7 +36,7 @@
                             if(isset($_POST['login']) && !isset($_SESSION['admin']))  {
                                 ?>
                                     <p>
-                                        <span class="error"> Incorrect username or password</span>
+                                        <span class="error" style = "color: red"> Incorrect username or password</span>
                                     </p>
 
                                 <?php

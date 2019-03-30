@@ -7,6 +7,17 @@
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/display-items.css" rel="stylesheet" type="text/css">
+</head>
+<body>
 <header class="masthead" style="background-image: url('<?php echo $catname_res['img'] ?> ')">
     <div class="overlay"></div>
     <div class="container">
@@ -37,31 +48,31 @@
     } else {
       ?>
 
-            <div class="offset-1 col">
+            <div class="offset col" >
 
                 <?php
                 do {
                     ?>
-                    <div class="row " style ="width: 80%; border: 2px solid #C0C0C0; border-radius: 5px;">
+                    <div class="row">
 
                         <div class="col-3" >
-                            <img  src="images/<?php echo $article_res['img']; ?>" style="width:100%; padding-top: 60px;  "alt="Card image cap">
+                            <img  src="images/<?php echo $article_res['img']; ?>" >
                         </div>
-                        <div class="col" style="padding-bottom: 10px; padding-top: 10px; ">
-                            <div  style="padding-left:20px; ">
-                                <h5 style="color: 	#787878"> <?php echo $article_res['title']; ?> </h5>
-                                <hr style="border: 0.5px solid 	#C0C0C0">
+                        <div class="col" >
+                            <div >
+                                <h5 > <?php echo $article_res['title']; ?> </h5>
+                                <hr>
                             </div>
-                            <div style="padding-left: 20px; ">
-                                <p  style="line-height:1.2em; height:2.4em; overflow:hidden;"> <?php echo $article_res['text']; ?> </p>
-                                <p style="text-align: center">  ... </p>
+                            <div >
+                                <p class="text_article"> <?php echo $article_res['text']; ?> </p>
+                                <p class="suspension">  ... </p>
 
 
-                                <hr style="border: 0.5px solid 	#C0C0C0">
+                                <hr>
                             </div>
 
-                            <div style="padding-left: 20px; text-align: center; ">
-                                <a  style="  margin:0 auto;" href="index.php?page=item&articleID=<?php echo $article_res['id']; ?>" class="btn btn-primary">View More </a>
+                            <div class="btn_view"  >
+                                <a href="index.php?page=item&articleID=<?php echo $article_res['id']; ?>" class="btn btn-primary">View More </a>
                             </div>
                         </div>
                     </div>
@@ -72,26 +83,8 @@
                 ?>
 
             </div>
-
-
-
-           <!--
-            <div class="item">
-                <a href="index.php?page=item&articleID=<?php /*echo $article_res['id']; */?>">
-                    <p>
-                        <h2><?php /*echo $article_res['title']; */?></h2>
-                    </p>
-                </a>
-
-                <p>
-                    <img src="images/<?php /*echo $article_res['img']; */?>" style="width:200px;height:150px;">
-
-                </p>
-            </div>
-        --><?php
-/*        } while ($article_res=mysqli_fetch_assoc($article_query));
-        */?>
     <?php
     }  ?>
 
-
+</body>
+</html>

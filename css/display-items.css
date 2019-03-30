@@ -1,0 +1,46 @@
+.offset .row{
+    width: 80%;
+    border: 2px solid #C0C0C0;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.col{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.col div{
+    padding-left:20px;
+}
+
+h5{
+    color: 	#787878
+}
+
+.btn_view{
+
+    text-align: center;
+}
+hr{
+    border: 0.5px solid #C0C0C0;
+}
+
+img{
+    width:100%; padding-top: 60px;
+}
+
+.text_article{
+    line-height:1.2em;
+    height:2.4em;
+    overflow:hidden;
+}
+
+.suspension{
+    text-align: center;
+}
+
+.btn_view  a {
+    margin:0 auto;
+}
