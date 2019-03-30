@@ -12,19 +12,20 @@
     }
 
     //check if user has submitted the add article form
-    if (isset($_POST['submit'])) {
+    if (!isset($_SESSION['addarticle']['title'])) {
         header("location:index.php?page=admin");
     }
 
     //enter the new article
-    $title= mysqli_real_escape_string($dbconnect, $_POST['title']);
-    $image= mysqli_real_escape_string($dbconnect,$_POST['image']);
-    $text= mysqli_real_escape_string($dbconnect,$_POST['text']);
-    $cat= mysqli_real_escape_string($dbconnect,$_POST['category']);
+    $title= mysqli_real_escape_string($dbconnect, $_SESSION['addarticle']['title']);
+    $image= mysqli_real_escape_string($dbconnect,$_SESSION['addarticle']['image']);
+    $text= mysqli_real_escape_string($dbconnect,$_SESSION['addarticle']['text']);
+    $cat= mysqli_real_escape_string($dbconnect,$_SESSION['addarticle']['category']);
 
     $article_sql= "insert into article (title , img, text, categoryId) values (' ".$title." ', '".$image."', '".$text."','".$cat."')";
     $article_qry= mysqli_query($dbconnect, $article_sql);
-
+    echo $article_sql;
+    unset($_SESSION['addarticle']);
 ?>
 
 <!doctype html>
