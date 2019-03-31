@@ -29,26 +29,45 @@
             </div>
         </div>
         <div>
-            <form action="">
-                <input type="search" placeholder="Search..">
-                <i  class="fa fa-search"  ></i>
+            <form method ="POST" action="index.php?page=home&action=search" >
+                <input name="search" type="search" placeholder="Search..">
+                <i  type ="submit" class="fa fa-search"  ></i>
             </form>
         </div>
     </div>
 </header>
 
 <?php
-//select all articles belonging to the selected categoryID
-$article_sql="SELECT *
+
+
+
+
+if (isset($_GET['action'])) {
+    if ($_GET['action']=="search") {
+
+        $search = $_POST['search'];
+        $article_sql="SELECT *
                   FROM article 
-                  where article.confirmed=1";
-if ($article_query=mysqli_query($dbconnect, $article_sql)){
-    $article_res=mysqli_fetch_assoc($article_query);
-}
-if (mysqli_num_rows($article_query)==0) {
-    echo "no article in the database";
-} else {
-    ?>
+                  where article.confirmed=1 and article.title LIKE '%$search%'";
+
+        }
+    } else {
+
+        //select all articles
+        $article_sql="SELECT *
+                          FROM article 
+                          where article.confirmed=1";
+        }
+
+    if ($article_query=mysqli_query($dbconnect, $article_sql)) {
+        $article_res = mysqli_fetch_assoc($article_query);
+    }
+
+
+    if (mysqli_num_rows($article_query)==0) {
+        echo "no article in the database";
+    } else {
+        ?>
 
     <div class="offset col">
 
@@ -61,7 +80,7 @@ if (mysqli_num_rows($article_query)==0) {
                         </div>
                         <div class="col" >
                             <div >
-                                <h5> <?php echo $article_res['title']; ?> </h5>
+                                <h5> <?php echo $article_res['title']; ?></h5>
                                 <hr>
                             </div>
                             <div >
