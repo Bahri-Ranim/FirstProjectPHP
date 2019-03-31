@@ -7,8 +7,6 @@
  */
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,13 +75,13 @@
                  </div>
 
           </li>
-          <li class="nav-link">
-              <div class="nav-link" >
-              <a class="dropbtn" style="text-decoration: none; color: white;" href="index.php?page=register">Sign-up
+                    <li class="nav-link">
+                        <div class="nav-link" >
+                            <a class="dropbtn" style="text-decoration: none; color: white;" href="index.php?page=register">Sign-up
 
-              </a>
-              </div>
-          </li>
+                            </a>
+                        </div>
+                    </li>
         </ul>
       </div>
     </div>
