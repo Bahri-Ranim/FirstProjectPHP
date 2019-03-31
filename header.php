@@ -30,7 +30,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="css/clean-blog.min.css" rel="stylesheet">
+   <link href="css/clean-blog.min.css" rel="stylesheet">
 
   <!-- Style for search bar -->
     <link href="css/search-bar.css" rel="stylesheet" type="text/css">
@@ -61,13 +61,13 @@
           <li class="nav-item">
             <a class="nav-link" href="index.php?page=contact">Contact</a>
           </li>
-          <li>
+         <!-- <li>
 
               <form action="">
                   <input type="search" placeholder="Search..">
-                  <i class="fa fa-search"  ></i>
+                  <i  class="fa fa-search"  ></i>
               </form>
-          </li>
+          </li>-->
           <li class="nav-link dropdown" >
 
               <button class="dropbtn">login</button>

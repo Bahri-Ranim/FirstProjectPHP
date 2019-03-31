@@ -29,6 +29,12 @@
                 </div>
             </div>
         </div>
+        <div>
+            <form action="">
+                <input type="search" placeholder="Search..">
+                <i  class="fa fa-search"  ></i>
+            </form>
+        </div>
     </div>
 </header>
 <?php

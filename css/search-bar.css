@@ -6,10 +6,10 @@ body {
 
 }
 
-li form{
+header form{
     position: relative;
     top: 50%;
-    left: 50%;
+    left: 95%;
     transform: translate(-50%,-50%);
     transition: all 1s;
     width: 50px;
@@ -21,7 +21,7 @@ li form{
     padding: 5px;
 }
 
-li form input{
+header form input{
     position: absolute;
     top: 0;
     left: 0;
@@ -51,16 +51,16 @@ li form input{
     transition: all 1s;
 }
 
-li form:hover{
+header form:hover{
     width: 200px;
     cursor: pointer;
 }
 
-li form:hover input{
+header form:hover input{
     display: block;
 }
 
-li form:hover .fa{
+header form:hover .fa{
     background: #07051a;
     color: white;
 }

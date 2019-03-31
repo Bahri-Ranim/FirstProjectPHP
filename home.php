@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <link href="css/display-items.css" rel="stylesheet" type="text/css">
+    <link href="css/search-bar.css" rel="stylesheet" type="text/css">
 
 
 
@@ -24,7 +25,14 @@
                     <h1>Something</h1>
                     <span class="subheading">Something </span>
                 </div>
+
             </div>
+        </div>
+        <div>
+            <form action="">
+                <input type="search" placeholder="Search..">
+                <i  class="fa fa-search"  ></i>
+            </form>
         </div>
     </div>
 </header>
