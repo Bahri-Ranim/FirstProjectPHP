@@ -20,7 +20,9 @@
                 <div class="card card-signin my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Control panel</h5>
-                        <h6>
+                        <h6><p>
+
+                            </p>
                             <p>
                                 <a href="index.php?page=addarticle">
                                     Add article

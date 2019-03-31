@@ -29,9 +29,11 @@
             </div>
         </div>
         <div>
-            <form method ="POST" action="index.php?page=home&action=search" >
+            <form method ="POST" action="index.php?action=search" >
+
                 <input name="search" type="search" placeholder="Search..">
-                <i  type ="submit" class="fa fa-search"  ></i>
+                <i class="fa fa-search" ></i>
+
             </form>
         </div>
     </div>
@@ -65,7 +67,12 @@ if (isset($_GET['action'])) {
 
 
     if (mysqli_num_rows($article_query)==0) {
-        echo "no article in the database";
+
+        ?>
+        <p style="margin-left: auto; margin-right: auto;text-align: center">
+            No articles found
+        </p>
+        <?php
     } else {
         ?>
 

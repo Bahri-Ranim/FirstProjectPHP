@@ -1,5 +1,5 @@
 <?php
-    $catname = "select category.name, category.img from category where category.categoryId=".$_GET['categoryID'] ;
+    $catname = "select * from category where category.categoryId=".$_GET['categoryID'] ;
     $cat_query = mysqli_query($dbconnect, $catname);
     $catname_res = mysqli_fetch_assoc($cat_query);
 
@@ -30,8 +30,9 @@
             </div>
         </div>
         <div>
-            <form action="">
-                <input type="search" placeholder="Search..">
+            <form method ="POST"
+                  action="index.php?page=category&categoryID=<?php echo $catname_res['categoryID']; ?>&action=search">
+                <input name="search" type="search" placeholder="Search..">
                 <i  class="fa fa-search"  ></i>
             </form>
         </div>
@@ -42,16 +43,37 @@
     if (!isset($_GET['categoryID'])) {
         header("location:index.php");
     }
-    //select all articles belonging to the selected categoryID
-    $article_sql="SELECT article.id, article.title, article.img, article.text, category.name as catname 
+
+
+    if (isset($_GET['action'])) {
+        if ($_GET['action']=="search") {
+
+            $search = $_POST['search'];
+
+            $article_sql="SELECT article.id, article.title, article.img, article.text, category.name as catname 
                   FROM article join category on article.categoryId=category.categoryID 
-                  WHERE article.confirmed=1 and article.categoryId=".$_GET['categoryID'];
-    if ($article_query=mysqli_query($dbconnect, $article_sql)){
-       $article_res=mysqli_fetch_assoc($article_query);
-    }
-    if (mysqli_num_rows($article_query)==0) {
-        echo "no article in the database";
-    } else {
+                  WHERE article.confirmed=1 and article.title like '%$search%'
+                  and article.categoryId=".$_GET['categoryID'];
+        }} else {
+
+            //select all articles belonging to the selected categoryID
+            $article_sql = "SELECT article.id, article.title, article.img, article.text, category.name as catname 
+                  FROM article join category on article.categoryId=category.categoryID 
+                  WHERE article.confirmed=1 and article.categoryId=" . $_GET['categoryID'];
+        }
+
+        if ($article_query=mysqli_query($dbconnect, $article_sql)){
+           $article_res=mysqli_fetch_assoc($article_query);
+        }
+
+        if (mysqli_num_rows($article_query)==0) {
+
+            ?>
+            <p style="margin-left: auto; margin-right: auto;text-align: center">
+                No articles found
+            </p>
+            <?php
+        } else {
       ?>
 
             <div class="offset col" >
