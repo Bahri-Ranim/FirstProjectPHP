@@ -72,8 +72,7 @@
 
               <button class="dropbtn">login</button>
                  <div class="dropdown-content">
-                     <a href="index.php?page=admin">Admin</a>
-                     <a href="index.php?page=user">User</a>
+                     <a href="index.php?page=admin">Login</a>
                      <a href="index.php?page=admin&action=logout">Logout</a>
                  </div>
 

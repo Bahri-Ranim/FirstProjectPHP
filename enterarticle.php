@@ -22,9 +22,8 @@
     $text= mysqli_real_escape_string($dbconnect,$_SESSION['addarticle']['text']);
     $cat= mysqli_real_escape_string($dbconnect,$_SESSION['addarticle']['category']);
 
-    $article_sql= "insert into article (title , img, text, categoryId) values (' ".$title." ', '".$image."', '".$text."','".$cat."')";
+    $article_sql= "insert into article (title , img, text, categoryId, confirmed) values (' ".$title." ', '".$image."', '".$text."','".$cat."','1')";
     $article_qry= mysqli_query($dbconnect, $article_sql);
-    echo $article_sql;
     unset($_SESSION['addarticle']);
 ?>
 

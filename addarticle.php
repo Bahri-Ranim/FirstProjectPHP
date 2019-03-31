@@ -51,11 +51,13 @@
 
                         <div class="form-label-group">
                             Category :
-                                <select class="custom-select-sm" name="category">
-                                    <option value="0">Select category:</option>
-                                    <option value="1">News</option>
-                                    <option value="2">Tips & Tricks</option>
-                                </select>
+                            <?php
+                            $selected=$_SESSION['addarticle']['category'];
+                            ?>
+                            <select class="custom-select-sm" name="category">
+                                <option value="1" <?php if($selected == '1'){echo("selected");}?> >News</option>
+                                <option value="2" <?php if($selected == '2'){echo("selected");}?> >Tips & Tricks</option>
+                            </select>
                         </div>
 
 

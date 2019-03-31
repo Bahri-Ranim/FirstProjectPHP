@@ -32,6 +32,7 @@
         $_SESSION['editarticle']['image']=$editart_res['img'];
         $_SESSION['editarticle']['text']=$editart_res['text'];
         $_SESSION['editarticle']['category']=$editart_res['categoryId'];
+        $_SESSION['editarticle']['confirmed']=$editart_res['confirmed'];
     }
 ?>
 
@@ -82,6 +83,18 @@
                             </TEXTAREA>
                             <p class="help-block text-danger"></p>
                         </div>
+
+                        <div class="form-label-group">
+                            Confirmed :
+                            <?php
+                            $selected=$_SESSION['editarticle']['confirmed'];
+                            ?>
+                            <select class="custom-select-sm" name="confirmed">
+                                <option value="1" <?php if($selected == '1'){echo("selected");}?> >Yes</option>
+                                <option value="0" <?php if($selected == '0'){echo("selected");}?> >NO</option>
+                            </select>
+                        </div>
+
 
                         <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="edit">Update</button>
                     </form>

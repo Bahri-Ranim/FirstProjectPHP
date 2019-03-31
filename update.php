@@ -20,9 +20,10 @@
     $image= mysqli_real_escape_string($dbconnect,$_SESSION['editarticle']['image']);
     $text= mysqli_real_escape_string($dbconnect,$_SESSION['editarticle']['text']);
     $cat= mysqli_real_escape_string($dbconnect,$_SESSION['editarticle']['category']);
+    $confirmed= mysqli_real_escape_string($dbconnect,$_SESSION['editarticle']['confirmed']);
 
 
-    $editart_sql="UPDATE article set title='".$title."', img='".$image."' , text= '".$text."', categoryID='".$cat."' where id=".$_SESSION['editarticle']['articleID'];
+    $editart_sql="UPDATE article set title='".$title."', img='".$image."' , text= '".$text."', categoryID='".$cat."', confirmed='".$confirmed."' where id=".$_SESSION['editarticle']['articleID'];
     //echo $editart_sql;
     $editart_query=mysqli_query($dbconnect, $editart_sql);
 

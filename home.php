@@ -31,8 +31,9 @@
 
 <?php
 //select all articles belonging to the selected categoryID
-$article_sql="SELECT article.id, article.title, article.img, article.text
-                  FROM article join category on article.categoryId=category.categoryID";
+$article_sql="SELECT *
+                  FROM article 
+                  where article.confirmed=1";
 if ($article_query=mysqli_query($dbconnect, $article_sql)){
     $article_res=mysqli_fetch_assoc($article_query);
 }

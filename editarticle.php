@@ -10,9 +10,15 @@
     }
 
 
-    $editart_sql="select * from article";
+    $editart_sql="select * from article where article.confirmed=1";
     $editart_query=mysqli_query($dbconnect, $editart_sql);
     $editart_res=mysqli_fetch_assoc($editart_query);
+
+    $artnotconfirmed_sql="select * from article where article.confirmed=0";
+    $artnotconfirmed_query=mysqli_query($dbconnect, $artnotconfirmed_sql);
+    $artnotconfirmed_res=mysqli_fetch_assoc($artnotconfirmed_query);
+
+
 
     //when user enter to another article, session should be reset
     unset($_SESSION['editarticle']);
@@ -43,7 +49,25 @@
                                     </a>
                                 </p>
                             <?php
-                        } while ($editart_res=mysqli_fetch_assoc($editart_query))
+                        } while ($editart_res=mysqli_fetch_assoc($editart_query));
+                    ?>
+
+                        <p>
+                            <h6>Not Confirmed Articles : </h6>
+                        </p>
+
+                    <?php
+                        do {
+                            ?>
+                            <p>
+                                <a href="index.php?page=editing&articleID=<?php echo $artnotconfirmed_res['id']; ?>">
+                                    <?php
+                                    echo $artnotconfirmed_res['title'];
+                                    ?>
+                                </a>
+                            </p>
+                            <?php
+                        } while ($artnotconfirmed_res=mysqli_fetch_assoc($artnotconfirmed_query));
                     ?>
                 </div>
             </div>

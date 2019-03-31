@@ -19,6 +19,7 @@
     $_SESSION['editarticle']['image']=$_POST['image'];
     $_SESSION['editarticle']['text']=$_POST['text'];
     $_SESSION['editarticle']['category']=$_POST['category'];
+    $_SESSION['editarticle']['confirmed']=$_POST['confirmed'];
 ?>
 
 <!doctype html>

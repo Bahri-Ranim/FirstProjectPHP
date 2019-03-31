@@ -39,7 +39,7 @@
     //select all articles belonging to the selected categoryID
     $article_sql="SELECT article.id, article.title, article.img, article.text, category.name as catname 
                   FROM article join category on article.categoryId=category.categoryID 
-                  WHERE article.categoryId=".$_GET['categoryID'];
+                  WHERE article.confirmed=1 and article.categoryId=".$_GET['categoryID'];
     if ($article_query=mysqli_query($dbconnect, $article_sql)){
        $article_res=mysqli_fetch_assoc($article_query);
     }
