@@ -7,7 +7,7 @@
  */
     session_start();
     //check if user is logged in
-    if(!isset($_SESSION['admin'])) {
+    if(!isset($_SESSION['admin']) && !isset($_SESSION['user'])) {
         header("location:index.php?page=admin");
     }
 
@@ -21,9 +21,12 @@
     $image= mysqli_real_escape_string($dbconnect,$_SESSION['addarticle']['image']);
     $text= mysqli_real_escape_string($dbconnect,$_SESSION['addarticle']['text']);
     $cat= mysqli_real_escape_string($dbconnect,$_SESSION['addarticle']['category']);
+    $confirmed= mysqli_real_escape_string($dbconnect,$_SESSION['addarticle']['confirmed']);
 
-    $article_sql= "insert into article (title , img, text, categoryId, confirmed) values (' ".$title." ', '".$image."', '".$text."','".$cat."','1')";
+    $article_sql= "insert into article (title , img, text, categoryId, confirmed) values (' ".$title." ', '".$image."', '".$text."','".$cat."','".$confirmed."')";
     $article_qry= mysqli_query($dbconnect, $article_sql);
+
+
     unset($_SESSION['addarticle']);
 ?>
 

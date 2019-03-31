@@ -1,7 +1,7 @@
 <?php
     session_start();
     //check if user in logged in
-    if(!isset($_SESSION['admin'])) {
+    if(!isset($_SESSION['admin']) && !isset($_SESSION['user'])) {
         header("location:index.php?page=admin");
     }
 
