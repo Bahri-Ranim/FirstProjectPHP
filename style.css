@@ -8,6 +8,12 @@ body {
     background: linear-gradient(to right, #bfbfbf, #bfbfbf);
 }
 
+
+.container_body{
+    padding-top:30px;
+
+}
+
 .card-signin {
     border: 0;
     border-radius: 1rem;

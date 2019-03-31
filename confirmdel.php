@@ -15,7 +15,7 @@ if(!isset($_SESSION['admin'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <LINK rel="stylesheet" type="text/css" href="style.css">
+    <LINK rel="stylesheet" type="text/css" href="css/panel.css">
 </head>
 <body>
 <body>

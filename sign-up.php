@@ -13,9 +13,9 @@
     <meta charset="UTF-8">
     <LINK rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-<body>
-<div class="container"  style="padding-top:30px ">
+<body style="background-image: url('img/bg-contact.png');">
+
+<div class="container container_body">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
