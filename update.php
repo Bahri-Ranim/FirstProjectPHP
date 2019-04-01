@@ -32,28 +32,32 @@
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <LINK rel="stylesheet" type="text/css" href="style.css">
+    <LINK rel="stylesheet" type="text/css" href="css/panel.css">
 </head>
 <body>
 <body>
-<div class="container">
+<div class="container container_body">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Edit article</h5>
-                    <h4>
-                        Article successfully updated !
-                    </h4>
+                <p class="card-body">
+
+                    <h5 class="card-title text-center">Article successfully updated !</h5>
+
+
+
                     <p>
-                    <h5>
-                        <a href="index.php?page=admin">
-                            Back to admin panel
-                        </a>
-                    </h5>
+                        <h5>
+                            <button class="btn btn-outline-secondary btn-block" >
+                            <a href="index.php?page=admin">
+                                Back to admin panel
+                            </a>
+                            </button>
+                        </h5>
+                    </p>
                     </p>
                 </div>
             </div>

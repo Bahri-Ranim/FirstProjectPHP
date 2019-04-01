@@ -30,7 +30,7 @@
 </head>
 <body>
 <body>
-<div class="container">
+<div class="container container_body">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
@@ -39,17 +39,25 @@
                         <?php echo "do you really wish to update ".$_SESSION['editarticle']['title']." ?";
                         ?>
                            <p>
+                               <button class="btn btn-outline-secondary " >
                                <a href="index.php?page=update">
-                                   Confim !
+                                   Confirm !
                                </a>
-                               |
+                               </button>
+
+                               <button class="btn btn-outline-danger " >
                                <a href="index.php?page=editing">
                                     Oops, go back
                                </a>
-                               |
+                               </button>
+                           </p>
+                                <br>
+                            <p>
+                               <button class="btn btn-outline-secondary btn-block " >
                                <a href="index.php?page=admin">
                                    Back to admin panel
                                </a>
+                               </button>
                            </p>
 
                 </div>

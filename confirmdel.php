@@ -19,7 +19,7 @@ if(!isset($_SESSION['admin'])) {
 </head>
 <body>
 <body>
-<div class="container">
+<div class="container container_body">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
@@ -31,18 +31,27 @@ if(!isset($_SESSION['admin'])) {
                     $delart_res=mysqli_fetch_assoc($delart_query);
                     echo "do you really wish to delete".$delart_res['title']." ?";
                         ?>
-                           <p>
+                           <p >
+                               <button class="btn btn-outline-secondary " >
                                <a href="index.php?page=confirmeddel&articleID=<?php echo $_GET['articleID']; ?>">
                                     Yes, delete it !
                                </a>
-                               |
+                               </button>
+
+                               <button class="btn btn-outline-danger " >
                                <a href="index.php?page=deletearticle">
                                     No, go back
                                </a>
-                               |
+                               </button>
+                           </p>
+
+                               <br>
+                            <p>
+                               <button class="btn btn-outline-secondary ">
                                <a href="index.php?page=admin">
                                    Back to admin panel
                                </a>
+                               </button>
                            </p>
                         <?php
                     ?>

@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <LINK rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body style="background-image: url('img/bg-contact.png');">
+<body style="background-image: url('img/1.jpg'); background-repeat: no-repeat;background-size: cover;">
 
 <div class="container container_body">
     <div class="row">

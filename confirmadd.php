@@ -28,23 +28,31 @@
 </head>
 <body>
 <body>
-<div class="container">
+<div class="container container_body">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Confirmation</h5>
+                <h5 class="card-title text-center">Are you sure you want to publish this article?</h5>
 
                     <p>
-                    <h4>You entred : </h4>
                         <h5><p><?php echo $_POST['title'] ?></p></h5>
                         <p><?php echo $_POST['text'] ?></p>
                     </p>
 
                     <p>
-                        <a href="index.php?page=enterarticle">Correct, continue </a>
-                        |
-                        <a href="index.php?page=addarticle">Oops, go back</a>
+
+                        <button class="btn btn-outline-secondary " >
+                            <a   href="index.php?page=enterarticle">Correct, continue </a>
+                        </button>
+
+
+
+                        <button type="button" class="btn btn-outline-danger bouton">
+                            <a href="index.php?page=addarticle">Oops, go back</a>
+                        </button>
+
+
                     </p>
 
                 </div>

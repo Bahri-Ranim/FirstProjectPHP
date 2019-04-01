@@ -35,23 +35,23 @@
 </head>
 <body>
 <body>
-<div class="container">
+<div class="container container_body">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Add article</h5>
+                    <p class="card-title">Please fill out this form with the required information about your article : </p>
                     <form class="form-signin" name="add" method="post" action="index.php?page=confirmadd">
 
                         <div class="form-label-group">
                             Title :
-                            <input type="text" name="title" value=" <?php echo $_SESSION['addarticle']['title']; ?>" class="form-control" placeholder="Title" >
+                            <input type="text" name="title" value=" <?php echo $_SESSION['addarticle']['title']; ?>" class="form-control" placeholder="Title" required >
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div class="form-label-group">
                             Image :
-                            <input type="text" name="image" value=" <?php echo $_SESSION['addarticle']['image']; ?>" class="form-control" placeholder="Image" >
+                            <input type="text" name="image" value=" <?php echo $_SESSION['addarticle']['image']; ?>" class="form-control" placeholder="Image"  required>
                             <p class="help-block text-danger"></p>
                         </div>
 
@@ -69,13 +69,13 @@
 
                         <div class="form-label-group">
                             Text :
-                            <TEXTAREA class="form-control" name="text" rows=4 cols=30>
+                            <TEXTAREA class="form-control" name="text" rows=4 cols=30  required>
                                 <?php echo $_SESSION['addarticle']['text']; ?>
                             </TEXTAREA>
                             <p class="help-block text-danger"></p>
                         </div>
 
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="login">Add</button>
+                        <button class=" btn-secondary btn-block btn" type="submit" name="login">Add</button>
                     </form>
                 </div>
             </div>

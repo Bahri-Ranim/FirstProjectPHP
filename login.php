@@ -5,13 +5,13 @@
     <LINK rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<body>
-<div class="container" style="padding-top:30px ">
+<body style="background-image: url('img/1.jpg'); background-repeat: no-repeat;background-size: cover;">
+<div class="container container_body">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Sign In</h5>
+                    <h5 class="card-title text-center">Login</h5>
                     <form class="form-signin" name="login" method="post" action="index.php?page=admin">
                         <div class="form-label-group">
                             <input type="text" id="username" name="username" class="form-control" placeholder="Username" >
@@ -44,7 +44,7 @@
                         ?>
 
 
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="login">Sign in</button>
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="login">Login</button>
                     </form>
                 </div>
             </div>

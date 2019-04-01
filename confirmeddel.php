@@ -22,17 +22,18 @@
 </head>
 <body>
 <body>
-<div class="container">
+<div class="container container_body">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Article deleted </h5>
-                        <h6> Article has succefully been deleted </h6>
+                    <h5 class="card-title text-center">Article has succefully been deleted</h5>
                         <p>
+                            <button class="btn btn-outline-secondary" >
                             <a href="index.php?page=admin">
                                 Return to admin panel
                             </a>
+                            </button>
                         </p>
                 </div>
             </div>

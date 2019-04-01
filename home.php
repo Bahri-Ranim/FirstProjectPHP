@@ -22,8 +22,8 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1>Something</h1>
-                    <span class="subheading">Something </span>
+                    <h2>Technology for everyone</h2>
+                    <span class="subheading">Join our community and learn something new everyday ! </span>
                 </div>
 
             </div>

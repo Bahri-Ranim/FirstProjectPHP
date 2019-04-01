@@ -38,7 +38,7 @@
 </head>
 <body>
 <body>
-<div class="container">
+<div class="container container_body">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
@@ -49,9 +49,11 @@
                     </h4>
                     <p>
                         <h5>
+                        <button class="btn btn-outline-secondary " >
                         <a href="index.php?page=admin">
                             Go back
                         </a>
+                        </button>
                         </h5>
                     </p>
                 </div>

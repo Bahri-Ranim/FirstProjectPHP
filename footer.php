@@ -20,11 +20,11 @@
               </li>
               <li>
                   <i class="fas fa-phone-square " ></i>
-                  <span> Phone: </span>
+                  <span> Phone: +216 77 234 567</span>
               </li>
               <li>
                   <i class="fas fa-envelope"></i>
-                  <span>mail: </span>
+                  <span>mail: technowlodge@tech.com</span>
 
               </li>
           </ul>
@@ -60,7 +60,7 @@
       </div>
       <hr>
       <div class="row center-block">
-          <p class="copyright text-muted ">Copyright &copy; Your Website 2019</p>
+          <p class="copyright text-muted ">Copyright &copy; Technowledge 2019</p>
       </div>
     </div>
   </footer>
