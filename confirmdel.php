@@ -39,7 +39,7 @@ if(!isset($_SESSION['admin'])) {
                                </button>
 
                                <button class="btn btn-outline-danger " >
-                               <a href="index.php?page=deletearticle">
+                               <a href="index.php?page=cpanel">
                                     No, go back
                                </a>
                                </button>
